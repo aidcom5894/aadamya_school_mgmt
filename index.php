@@ -63,7 +63,7 @@ Cancel Preloader</span>
 <div class="header-top-right">
 <ul class="header-info">
 <li><a href="#">Login</a></li>
-<li><a href="#">Register</a></li>
+<li><a href="onboarding/institute_registration">Register</a></li>
 <li class="header-btn"><a href="#" class="edu-btn btn-secondary btn-medium">Apply Now <i class="icon-4"></i></a></li>
 </ul>
 </div>
@@ -187,12 +187,26 @@ Cancel Preloader</span>
 <li><a href="blog-details.html">Blog Details</a></li>
 </ul>
 </li>
+
+<li class="has-droupdown"><a href="#">Dashboard</a>
+<ul class="submenu">
+<li><a href="#">Institute Signup</a></li>
+<li><a href="#">Admin Login</a></li>
+<li><a href="#">Teachers Login</a></li>
+<li><a href="#">Students Login</a></li>
+<li><a href="#">Parents Login</a></li>
+
+</ul>
+</li>
+
 <li class="has-droupdown"><a href="#">Contact</a>
 <ul class="submenu">
 <li><a href="contact-us.html">Contact Us</a></li>
 <li><a href="contact-me.html">Contact Me</a></li>
 </ul>
 </li>
+
+
 </ul>
 </nav>
 </div>

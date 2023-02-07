@@ -2,8 +2,8 @@
 
 <!-- Footer Area Start Here -->
 <footer class="footer-wrap-layout1">
-<div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by <a
-href="#">PsdBosS</a></div>
+<div class="copyright">© Copyrights <a href="#">Aadamya</a> <?php echo date('Y'); ?>. All rights reserved. Powered By <a
+href="#">AIDCOM IT Service & Solutions</a></div>
 </footer>
 <!-- Footer Area End Here -->
 </div>

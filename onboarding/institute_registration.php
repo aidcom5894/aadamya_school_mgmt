@@ -2,16 +2,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>ODDO - Login and Register Form HTML5 Template</title>
+<title>Aadamya-Institute Registration</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <!-- External CSS libraries -->
 <link type="text/css" rel="stylesheet" href="../modules/onboarding/assets/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="../modules/onboarding/assets/fonts/font-awesome/css/font-awesome.min.css">
 <link type="text/css" rel="stylesheet" href="../modules/onboarding/assets/fonts/flaticon/font/flaticon.css">
-
-<script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
-
 
 <!-- Favicon icon -->
 <link rel="shortcut icon" href="../modules/onboarding/assets/img/favicon.ico" type="image/x-icon" >
@@ -30,11 +27,11 @@
 <div class="login-13">
 <div class="container-fluid">
 <div class="row">
-<div class="col-lg-6 col-md-12 bg-img">
+<div class="col-lg-6 col-md-12 bg-img ">
 <div class="bg-img-inner">
 <div class="info">
-<div class="name_wrap"><h3><span>ADMIN</span> LOGIN<span class="overlay_effect"></span></h3></div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Ipsum has been the industry's standard dummy </p>
+<div class="name_wrap"><h3><span>INSTITUTE</span> REGISTRATION<span class="overlay_effect"></span></h3></div>
+<p>Experience the all new Feature </p>
 </div>
 </div>
 </div>
@@ -46,41 +43,48 @@
 <img src="../modules/onboarding/assets/img/logos/logo.png" alt="logo">
 </a>
 </div>
-<h3>Sign Into Your Account</h3>
+<h3>Create An Cccount</h3>
 <div class="btn-section clearfix">
-<a href="admin_login.php" class="link-btn active btn-1 active-bg">Login</a>
-<a href="admin_registration" class="link-btn btn-2 default-bg">Register</a>
+<a href="admin_login" class="link-btn active btn-1 default-bg">Login</a>
+<a href="admin_registration" class="link-btn btn-2  active-bg">Register</a>
 </div>
 <div class="login-inner-form">
 <form action="#" method="GET">
-<div class="form-group form-box clearfix">
-<input name="email" type="email" class="form-control" placeholder="Admin Username" autocomplete="off" aria-label="Email Address">
- 
+<div class="form-group form-box">
+<input name="name" type="text" class="form-control" placeholder="Full Name" aria-label="Full Name">
+
+</div>
+<div class="form-group form-box">
+<input name="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+
 </div>
 <div class="form-group form-box clearfix">
 <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
 
 </div>
-<div class="checkbox form-group clearfix">
-<div class="form-check float-start">
+<div class="form-group checkbox clearfix">
+<div class="clearfix float-start">
+<div class="form-check">
 <input class="form-check-input" type="checkbox" id="rememberme">
 <label class="form-check-label" for="rememberme">
-Remember me
+I agree to the terms of service
 </label>
 </div>
-<a href="forgot-password-13.html" class="link-light float-end forgot-password">Forgot password?</a>
+</div>
 </div>
 <div class="form-group">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Login</button>
+<button type="submit" class="btn btn-primary btn-lg btn-theme">Register</button>
 </div>
 </form>
 </div>
-<ul class="social-list form-group">
+<ul class="social-list">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
-<li><a href="http://localhost/aadamya_school_mgmt" class="goole-color" ><span>Home</span></a></li>
+<li><a href="#" class="twitter-color"><i class="fa fa-twitter twitter-i"></i><span>Home</span></a></li>
 <!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
-<p class="none-2">Don't have an account? <a href="register-13.html" class="thembo"> Register here</a></p>
+
+<!-- <p class="none-2">Already a member?<a href="login-13.html" class="thembo">Login here</a></p> -->
+
 </div>
 </div>
 </div>
@@ -93,7 +97,7 @@ Remember me
 <script src="../modules/onboarding/assets/js/jquery-3.6.0.min.js"></script>
 <script src="../modules/onboarding/assets/js/bootstrap.bundle.min.js"></script>
 <script src="../modules/onboarding/assets/js/jquery.validate.min.js"></script>
-<!-- <script src="assets/js/app.js"></script> -->
+<script src="../modules/onboarding/assets/js/app.js"></script>
 <!-- Custom JS Script -->
 </body>
 </html>
