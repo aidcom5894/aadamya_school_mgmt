@@ -1,10 +1,3 @@
-<?php 
-
-include('./master_content/ui_header.php');
-include('./master_content/ui_navbar.php');
-
-?>
-
 <!--=====================================-->
 <!--=       Hero Banner Area Start      =-->
 <!--=====================================-->
@@ -844,17 +837,3 @@ include('./master_content/ui_navbar.php');
 <!-- End Ad Banner Area  -->
 
 
-
-
-
-
-
-
-
-
-
-<?php 
-
-include('./master_content/ui_footer.php');
-
-?>

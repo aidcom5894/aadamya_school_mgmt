@@ -43,17 +43,23 @@
 <img src="../modules/onboarding/assets/img/logos/logo.png" alt="logo">
 </a>
 </div>
-<h3>Create An Cccount</h3>
+<h3>Register Your Institute Here</h3>
 <div class="btn-section clearfix">
 <a href="admin_login" class="link-btn active btn-1 default-bg">Login</a>
 <a href="admin_registration" class="link-btn btn-2  active-bg">Register</a>
 </div>
 <div class="login-inner-form">
 <form action="#" method="GET">
-<div class="form-group form-box">
-<input name="name" type="text" class="form-control" placeholder="Full Name" aria-label="Full Name">
 
+<div class="form-group form-box">
+<input name="name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name">
 </div>
+
+<div class="form-group form-box">
+<input name="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name">
+</div>
+
+
 <div class="form-group form-box">
 <input name="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
 
@@ -79,7 +85,7 @@ I agree to the terms of service
 </div>
 <ul class="social-list">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
-<li><a href="#" class="twitter-color"><i class="fa fa-twitter twitter-i"></i><span>Home</span></a></li>
+<li><a href="http://localhost/aadamya_school_mgmt" class="twitter-color"><i class="fa fa-twitter twitter-i"></i><span>Home</span></a></li>
 <!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
 
