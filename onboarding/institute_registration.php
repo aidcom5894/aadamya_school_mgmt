@@ -49,26 +49,28 @@
 <a href="admin_registration" class="link-btn btn-2  active-bg">Register</a>
 </div>
 <div class="login-inner-form">
-<form action="#" method="GET">
+
+
+<form action="#" method="POST">
 
 <div class="form-group form-box">
-<input name="name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name">
+<input name="name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name" autocomplete="off" required="">
 </div>
 
 <div class="form-group form-box">
-<input name="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name">
+<input name="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
 </div>
 
 
 <div class="form-group form-box">
-<input name="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+<input name="phone" type="tel" class="form-control" placeholder="HOD Contact No." aria-label="HOD Contact" autocomplete="off" required="">
 
 </div>
 <div class="form-group form-box clearfix">
-<input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+<input name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" autocomplete="off" minlength="8" required="">
 
 </div>
-<div class="form-group checkbox clearfix">
+<!-- <div class="form-group checkbox clearfix">
 <div class="clearfix float-start">
 <div class="form-check">
 <input class="form-check-input" type="checkbox" id="rememberme">
@@ -77,15 +79,17 @@ I agree to the terms of service
 </label>
 </div>
 </div>
-</div>
+</div> -->
 <div class="form-group">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Register</button>
+<button type="submit" name="register" class="btn btn-primary btn-lg btn-theme">Register</button>
 </div>
 </form>
+
+
 </div>
 <ul class="social-list">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
-<li><a href="http://localhost/aadamya_school_mgmt" class="twitter-color"><i class="fa fa-twitter twitter-i"></i><span>Home</span></a></li>
+<li><a href="http://localhost/aadamya_school_mgmt" class="goole-color" ><span>Home</span></a></li>
 <!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
 
