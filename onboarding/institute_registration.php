@@ -24,6 +24,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configu
 <!-- Custom Stylesheet -->
 <link type="text/css" rel="stylesheet" href="../modules/onboarding/assets/css/style.css">
 
+<style type="text/css">
+
+
+</style>
+
 </head>
 <body id="top">
 <div class="page_loader"></div>
@@ -56,19 +61,20 @@ include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configu
 <div class="login-inner-form">
 
 
+
 <form action="#" method="POST">
 
 <div class="form-group form-box">
-<input name="institute_name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name" autocomplete="off" required="">
+<input name="institute_name" id="name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name" autocomplete="off" required="" oninput="changetoTitle()">
 </div>
 
 <div class="form-group form-box">
-<input name="hod_name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
+<input name="hod_name" id="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
 </div>
 
 
 <div class="form-group form-box">
-<input name="contact" type="tel" class="form-control" placeholder="HOD Contact No." aria-label="HOD Contact" autocomplete="off" required="">
+<input name="contact" type="number" maxlength="10" class="form-control" placeholder="HOD Contact No." aria-label="HOD Contact" autocomplete="off" required="" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 
 </div>
 <div class="form-group form-box clearfix">
@@ -90,6 +96,14 @@ I agree to the terms of service
 </div>
 </form>
 
+<script type="text/javascript">
+	function changetoTitle()
+	{
+		var authorisedName = document.getElementById('name');
+		authorisedName.value = authorisedName.value.toUpperCase();
+	}
+</script>
+
 <?php 
 
 if(isset($_POST['register']))
@@ -103,14 +117,26 @@ if(isset($_POST['register']))
 
 	$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$instId','$instAddress')";
 
+	$query = "SELECT * FROM institute_registration WHERE (institute_name='$instName' or hod_contact='$hodContact')";
 
-	if(mysqli_query($config, $sql))
+	$dataexist = mysqli_query($config,$query);
+
+	if(mysqli_num_rows($dataexist)>0)
 	{
-		echo "<script>alert('Test Successful')</script>";
+		echo "<script>alert('You are already Registered. Please Login to access.')</script>";
+		echo '<script type="text/javascript">window.location = "admin_login"</script>';
 	}
+
+	elseif(mysqli_query($config, $sql))
+	{
+		echo "<script>alert('Registration Successful')</script>";
+		echo '<script type="text/javascript">window.location = "admin_login"</script>';
+	}
+
 	else
 	{
-		echo "<script>alert('Test Failed')</script>";
+		echo "<script>alert('Institute Registration Failed')</script>";
+		echo '<script type="text/javascript">window.location = "institute_registration"</script>';
 	}
 }
 
@@ -137,7 +163,7 @@ if(isset($_POST['register']))
 <script src="../modules/onboarding/assets/js/jquery-3.6.0.min.js"></script>
 <script src="../modules/onboarding/assets/js/bootstrap.bundle.min.js"></script>
 <script src="../modules/onboarding/assets/js/jquery.validate.min.js"></script>
-<script src="../modules/onboarding/assets/js/app.js"></script>
+<!-- <script src="../modules/onboarding/assets/js/app.js"></script> -->
 <!-- Custom JS Script -->
 </body>
 </html>
