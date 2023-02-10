@@ -1,6 +1,11 @@
+<?php 
+
+include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configuration.php');
+
+?>	
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
 <title>Aadamya-Institute Registration</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,16 +59,16 @@
 <form action="#" method="POST">
 
 <div class="form-group form-box">
-<input name="name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name" autocomplete="off" required="">
+<input name="institute_name" type="text" class="form-control" placeholder="Institute Name" aria-label="Full Name" autocomplete="off" required="">
 </div>
 
 <div class="form-group form-box">
-<input name="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
+<input name="hod_name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
 </div>
 
 
 <div class="form-group form-box">
-<input name="phone" type="tel" class="form-control" placeholder="HOD Contact No." aria-label="HOD Contact" autocomplete="off" required="">
+<input name="contact" type="tel" class="form-control" placeholder="HOD Contact No." aria-label="HOD Contact" autocomplete="off" required="">
 
 </div>
 <div class="form-group form-box clearfix">
@@ -85,6 +90,31 @@ I agree to the terms of service
 </div>
 </form>
 
+<?php 
+
+if(isset($_POST['register']))
+{
+	$instName = $_POST['institute_name'];
+	$hodName = $_POST['hod_name'];
+	$hodContact = $_POST['contact'];
+	$password = $_POST['password'];
+	$instId = "Institute Registration";
+	$instAddress = "Address Default";
+
+	$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$instId','$instAddress')";
+
+
+	if(mysqli_query($config, $sql))
+	{
+		echo "<script>alert('Test Successful')</script>";
+	}
+	else
+	{
+		echo "<script>alert('Test Failed')</script>";
+	}
+}
+
+?>
 
 </div>
 <ul class="social-list">

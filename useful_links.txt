@@ -21,5 +21,7 @@ https://preview.themeforest.net/item/edulerns-education-courses-html-template/fu
 http://kodeforest.net/html/uoe/
 https://preview.themeforest.net/item/akkhor-school-management-admin-template/full_screen_preview/23687250
 
-
+====== Link Redirection ======
+https://css-tricks.com/php-include-from-root/
+https://stackoverflow.com/questions/16048818/include-php-files-when-they-are-in-different-folders
 
