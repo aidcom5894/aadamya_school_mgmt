@@ -117,13 +117,20 @@ if(isset($_POST['register']))
 
 	$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$instId','$instAddress')";
 
-	$query = "SELECT * FROM institute_registration WHERE (institute_name='$instName' or hod_contact='$hodContact')";
+	$queryinstName = "SELECT * FROM institute_registration WHERE (institute_name='$instName')";
+	$queryhodContact = "SELECT * FROM institute_registration WHERE (hod_name='$hodName')";
 
-	$dataexist = mysqli_query($config,$query);
+	$dataexist = mysqli_query($config,$queryinstName);
 
 	if(mysqli_num_rows($dataexist)>0)
 	{
-		echo "<script>alert('You are already Registered. Please Login to access.')</script>";
+		echo "<script>alert('Your Institute is already Registered. Please Login to access Dashboard.')</script>";
+		echo '<script type="text/javascript">window.location = "admin_login"</script>';
+	}
+
+	elseif(mysqli_query($config,$queryhodContact))
+	{
+		echo "<script>alert('HOD Contact already exists. Please Login to access Dashboard.')</script>";
 		echo '<script type="text/javascript">window.location = "admin_login"</script>';
 	}
 
