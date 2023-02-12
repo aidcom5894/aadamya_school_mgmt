@@ -117,10 +117,14 @@ I agree to the terms of service
 		$password = $_POST['password'];
 		$genInstId = strtoupper(substr($instName, 0,4).date('my').substr($hodContact,-4));
 		$inst_recognition_id = $genInstId;
+		$institute_email = "youremail@institute.com";
 		$instRegId = "Update your Institution Registration No.";
 		$instAddress = "Update your Institute Address Here";
+		$admin_role = "super_admin";
 
-		$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_recognition_id,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$inst_recognition_id','$instRegId','$instAddress')";
+		$sql = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,password,login_id,institute_email,inst_reg_id,institute_address) VALUES('$instName','$hodName','$admin_role','$hodContact','$password','$inst_recognition_id','$institute_email','$instRegId','$instAddress');INSERT INTO admin_login_details (admin_name, admin_role, login_id, password) SELECT admin_name, admin_role, login_id, password FROM institute_registration";
+
+		// $sql = "INSERT INTO admin_login_details (admin_name, admin_role, login_id, password) SELECT admin_name, admin_role, login_id, password FROM institute_registration";
 
 		$checkInstName = mysqli_query($config, "SELECT * FROM institute_registration WHERE (institute_name='$instName')");
 
@@ -151,7 +155,7 @@ I agree to the terms of service
 			echo "</div>";
 		}
 		
-		elseif(mysqli_query($config,$sql))
+		elseif(mysqli_multi_query($config,$sql))
 		{
 			echo "<svg xmlns='http://www.w3.org/2000/svg' style='display: none;'>";
 			echo "<symbol id='check-circle-fill' fill='currentColor' viewBox='0 0 16 16'>";
@@ -164,10 +168,13 @@ I agree to the terms of service
 			echo "</div>";
 			echo "</div>";
 
+
+
 		}
+
 		else
 		{
-			echo "Failed with error:".mysqli_error();
+			echo "Failed";
 		}
 	}
 

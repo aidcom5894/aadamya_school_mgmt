@@ -1,6 +1,10 @@
+<?php 
 
+include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configuration.php');
+
+?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
 <title>AADAMYA - ADMIN LOGIN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,21 +50,23 @@
 <img src="../modules/onboarding/assets/img/logos/logo.png" alt="logo">
 </a>
 </div>
-<h3>ADMIN LOGIN PORTAL</h3>
+<h3>Admin Login Portal</h3>
 <div class="btn-section clearfix">
 <a href="login_platform" class="link-btn active btn-1 active-bg">Login</a>
 <a href="institute_registration" class="link-btn btn-2 default-bg">Register</a>
 </div>
 <div class="login-inner-form">
-<form action="#" method="GET">
+
+
+<form action="#" method="POST">
 
 <div class="form-group form-box clearfix">
-<input name="email" type="text" class="form-control" placeholder="Institute ID" autocomplete="off" aria-label="Institute ID"> 
+<input name="adminName" type="text" class="form-control" placeholder="HOD Name" autocomplete="off" aria-label="Institute ID"> 
 </div>
 
-<!-- <div class="form-group form-box clearfix">
-<input name="email" type="email" class="form-control" placeholder="HOD Contact No" autocomplete="off" aria-label="Email Address"> 
-</div> -->
+<div class="form-group form-box clearfix">
+<input name="instID" type="text" class="form-control" placeholder="Institute ID" autocomplete="off" aria-label="Institute ID"> 
+</div>
 
 <div class="form-group form-box clearfix">
 <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
@@ -76,16 +82,17 @@ Remember me
 <a href="#" class="link-light float-end forgot-password">Forgot password?</a>
 </div>
 <div class="form-group">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Login</button>
+<button type="submit" name="login" class="btn btn-primary btn-lg btn-theme">Login</button>
 </div>
 </form>
 </div>
+
 <ul class="social-list form-group">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
 <li><a href="http://localhost/aadamya_school_mgmt" class="goole-color" ><span>Home</span></a></li>
 <!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
-<p class="none-2">Don't have an account? <a href="register-13.html" class="thembo"> Register here</a></p>
+<p class="none-2">Don't have an account? <a href="#" class="thembo"> Register here</a></p>
 </div>
 </div>
 </div>
@@ -93,6 +100,38 @@ Remember me
 </div>
 </div>
 <!-- Login 13 end -->
+
+<?php 
+	
+	if(isset($_POST['login']))
+	{
+		$admin_Name = $_POST['adminName'];
+		$institute_id = $_POST['instID'];
+		$password = $_POST['password'];
+
+		$checkEntry = mysqli_query($config, "SELECT * FROM admin_login_details WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
+
+		if(mysqli_num_rows($checkEntry)>0)
+		{
+			session_start();
+			$_SESSION['sessionName'] = $admin_Name;
+			header("location:admin_dashboard");
+		}
+		else
+		{
+			echo "<script>alert('Login Failed')</script>";
+		}
+
+	}
+	else
+	{
+		echo "";
+	}
+
+?>
+
+
+
 
 <!-- External JS libraries -->
 <script src="../modules/onboarding/assets/js/jquery-3.6.0.min.js"></script>

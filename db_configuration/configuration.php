@@ -13,7 +13,7 @@ if(!$config)
 }
 else
 {
-	echo "";
+	echo "Welcome";
 }
 
-?>
+?>																																		
