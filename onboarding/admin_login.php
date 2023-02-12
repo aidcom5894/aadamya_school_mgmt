@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>ODDO - Login and Register Form HTML5 Template</title>
+<title>AADAMYA - ADMIN LOGIN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <!-- External CSS libraries -->
@@ -34,7 +34,7 @@
 <div class="bg-img-inner">
 <div class="info">
 <div class="name_wrap"><h3><span>ADMIN</span> LOGIN<span class="overlay_effect"></span></h3></div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Ipsum has been the industry's standard dummy </p>
+<p style="text-align:justify;">The Full Featured Dashboard awaits to help you Experience the awesome online Functionality of <strong>Aadamya</strong>. Login to experience the leading Features for managing all School Transations.</p>
 </div>
 </div>
 </div>
@@ -46,21 +46,26 @@
 <img src="../modules/onboarding/assets/img/logos/logo.png" alt="logo">
 </a>
 </div>
-<h3>Sign Into Your Account</h3>
+<h3>ADMIN LOGIN PORTAL</h3>
 <div class="btn-section clearfix">
-<a href="admin_login.php" class="link-btn active btn-1 active-bg">Login</a>
-<a href="admin_registration" class="link-btn btn-2 default-bg">Register</a>
+<a href="login_platform" class="link-btn active btn-1 active-bg">Login</a>
+<a href="institute_registration" class="link-btn btn-2 default-bg">Register</a>
 </div>
 <div class="login-inner-form">
 <form action="#" method="GET">
+
 <div class="form-group form-box clearfix">
-<input name="email" type="email" class="form-control" placeholder="Admin Username" autocomplete="off" aria-label="Email Address">
- 
+<input name="email" type="text" class="form-control" placeholder="Institute ID" autocomplete="off" aria-label="Institute ID"> 
 </div>
+
+<!-- <div class="form-group form-box clearfix">
+<input name="email" type="email" class="form-control" placeholder="HOD Contact No" autocomplete="off" aria-label="Email Address"> 
+</div> -->
+
 <div class="form-group form-box clearfix">
 <input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
-
 </div>
+
 <div class="checkbox form-group clearfix">
 <div class="form-check float-start">
 <input class="form-check-input" type="checkbox" id="rememberme">
@@ -68,7 +73,7 @@
 Remember me
 </label>
 </div>
-<a href="forgot-password-13.html" class="link-light float-end forgot-password">Forgot password?</a>
+<a href="#" class="link-light float-end forgot-password">Forgot password?</a>
 </div>
 <div class="form-group">
 <button type="submit" class="btn btn-primary btn-lg btn-theme">Login</button>

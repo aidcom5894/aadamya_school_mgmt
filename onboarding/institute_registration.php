@@ -55,8 +55,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configu
 </div>
 <h3>Register Your Institute Here</h3>
 <div class="btn-section clearfix">
-<a href="admin_login" class="link-btn active btn-1 default-bg">Login</a>
-<a href="admin_registration" class="link-btn btn-2  active-bg">Register</a>
+<a href="login_platform" class="link-btn active btn-1 default-bg">Login</a>
+<a href="institute_registration" class="link-btn btn-2  active-bg">Register</a>
 </div>
 <div class="login-inner-form">
 
@@ -69,7 +69,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configu
 </div>
 
 <div class="form-group form-box">
-<input name="hod_name" id="name" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="">
+<input name="hod_name" id="hodName" type="text" class="form-control" placeholder="HOD Name" aria-label="Full Name" autocomplete="off" required="" oninput="changetoTitle()">
 </div>
 
 
@@ -100,54 +100,80 @@ I agree to the terms of service
 	function changetoTitle()
 	{
 		var authorisedName = document.getElementById('name');
-		authorisedName.value = authorisedName.value.toUpperCase();
+		var authorisedHod = document.getElementById('hodName');
+
+		authorisedName.value = authorisedName.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});
+
+		authorisedHod.value = authorisedHod.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});		
 	}
 </script>
 
 <?php 
-
-if(isset($_POST['register']))
-{
-	$instName = $_POST['institute_name'];
-	$hodName = $_POST['hod_name'];
-	$hodContact = $_POST['contact'];
-	$password = $_POST['password'];
-	$instId = "Institute Registration";
-	$instAddress = "Address Default";
-
-	$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$instId','$instAddress')";
-
-	$queryinstName = "SELECT * FROM institute_registration WHERE (institute_name='$instName')";
-	$queryhodContact = "SELECT * FROM institute_registration WHERE (hod_name='$hodName')";
-
-	$dataexist = mysqli_query($config,$queryinstName);
-
-	if(mysqli_num_rows($dataexist)>0)
+	if(isset($_POST['register']))
 	{
-		echo "<script>alert('Your Institute is already Registered. Please Login to access Dashboard.')</script>";
-		echo '<script type="text/javascript">window.location = "admin_login"</script>';
-	}
+		$instName = $_POST['institute_name'];
+		$hodName = $_POST['hod_name'];
+		$hodContact = "+91-".$_POST['contact'];
+		$password = $_POST['password'];
+		$genInstId = strtoupper(substr($instName, 0,4).date('my').substr($hodContact,-4));
+		$inst_recognition_id = $genInstId;
+		$instRegId = "Update your Institution Registration No.";
+		$instAddress = "Update your Institute Address Here";
 
-	elseif(mysqli_query($config,$queryhodContact))
-	{
-		echo "<script>alert('HOD Contact already exists. Please Login to access Dashboard.')</script>";
-		echo '<script type="text/javascript">window.location = "admin_login"</script>';
-	}
+		$sql = "INSERT INTO institute_registration(institute_name,hod_name,hod_contact,password,inst_recognition_id,inst_reg_id,institute_address) VALUES('$instName','$hodName','$hodContact','$password','$inst_recognition_id','$instRegId','$instAddress')";
 
-	elseif(mysqli_query($config, $sql))
-	{
-		echo "<script>alert('Registration Successful')</script>";
-		echo '<script type="text/javascript">window.location = "admin_login"</script>';
-	}
+		$checkInstName = mysqli_query($config, "SELECT * FROM institute_registration WHERE (institute_name='$instName')");
 
-	else
-	{
-		echo "<script>alert('Institute Registration Failed')</script>";
-		echo '<script type="text/javascript">window.location = "institute_registration"</script>';
+		$checkhodContact = mysqli_query($config, "SELECT * FROM institute_registration WHERE (hod_contact='$hodContact')");
+
+		
+		if(mysqli_num_rows($checkInstName)>0)	
+		{
+			echo "<div class='alert alert-danger d-flex align-items-center' role='alert'>";
+			echo "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'>";
+			echo "<path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/>";
+			echo "</svg>";
+			echo "<div>";
+			echo "Your Institue is already registered.<a href='admin_login' class='alert-link'> Login Here</a>";
+			echo "</div>";
+			echo "</div>";
+		}
+
+		elseif(mysqli_num_rows($checkhodContact)>0)
+		{
+			echo "<div class='alert alert-danger d-flex align-items-center' role='alert'>";
+			echo "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-exclamation-triangle-fill flex-shrink-0 me-2' viewBox='0 0 16 16' role='img' aria-label='Warning:'>";
+			echo "<path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/>";
+			echo "</svg>";
+			echo "<div>";
+			echo "Contact No already Registered.<a href='admin_login' class='alert-link'> Login Here</a>";
+			echo "</div>";
+			echo "</div>";
+		}
+		
+		elseif(mysqli_query($config,$sql))
+		{
+			echo "<svg xmlns='http://www.w3.org/2000/svg' style='display: none;'>";
+			echo "<symbol id='check-circle-fill' fill='currentColor' viewBox='0 0 16 16'>";
+			echo "<path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/>";
+			echo "</symbol>";
+			echo "<div class='alert alert-success d-flex align-items-center' role='alert'>";
+			echo "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Success:'><use xlink:href='#check-circle-fill'/></svg>";
+			echo "<div>";
+			echo "Institute Registered Successfully with ID <br> <strong>$inst_recognition_id</strong>. Use this ID to <a href='admin_login' class='alert-link'>Login</a>";
+			echo "</div>";
+			echo "</div>";
+
+		}
+		else
+		{
+			echo "Failed with error:".mysqli_error();
+		}
 	}
-}
 
 ?>
+
+
 
 </div>
 <ul class="social-list">

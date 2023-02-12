@@ -33,7 +33,7 @@
 <div class="col-lg-6 col-md-12 bg-img">
 <div class="bg-img-inner">
 <div class="info">
-<div class="name_wrap"><h3><span>login</span> portal<span class="overlay_effect"></span></h3></div>
+<div class="name_wrap"><h3><span>Teachers'</span> Login<span class="overlay_effect"></span></h3></div>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Ipsum has been the industry's standard dummy </p>
 </div>
 </div>
@@ -48,17 +48,18 @@
 </div>
 <h3>Select User Type for Login</h3>
 <div class="btn-section clearfix">
-<a href="admin_login.php" class="link-btn active btn-1 active-bg">Login</a>
-<a href="admin_registration" class="link-btn btn-2 default-bg">Register</a>
+<a href="login_platform" class="link-btn active btn-1 active-bg">Login</a>
+<a href="institute_registration" class="link-btn btn-2 default-bg">Register</a>
 </div>
 <div class="login-inner-form">
+
 <form action="#" method="GET">
 <div class="form-group form-box clearfix">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Admin Login</button> 
+<button type="button" class="btn btn-primary btn-lg btn-theme" onclick="function redirectAdmin(){window.location.href='admin_login'};redirectAdmin()">Admin Login</button> 
 </div>
 
 <div class="form-group form-box clearfix">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Teacher Login</button>
+<button type="button" class="btn btn-primary btn-lg btn-theme" onclick="function redirectTeacher(){window.location.href='teachers_login';} redirectTeacher()">Teacher Login</button>
 </div>
 
 <div class="form-group form-box clearfix">
@@ -70,6 +71,8 @@
 </div>
 
 </form>
+
+
 </div>
 <ul class="social-list">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
