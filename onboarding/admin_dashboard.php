@@ -1,9 +1,3 @@
-<?php 
-
-
-include('../master_content/admin_master/admin_header.php');
-
-?>
 
 
 <!-- Page Area Start Here -->
@@ -12,7 +6,7 @@ include('../master_content/admin_master/admin_header.php');
 <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
 <div class="mobile-sidebar-header d-md-none">
 <div class="header-logo">
-<a href="index.html"><img src="modules/dashboard/img/logo1.png" alt="logo"></a>
+<a href="index.html"><img src="..modules/dashboard/img/logo1.png" alt="logo"></a>
 </div>
 </div>
 <div class="sidebar-menu-content">
