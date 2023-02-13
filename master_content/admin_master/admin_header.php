@@ -13,15 +13,14 @@ include($_SERVER['DOCUMENT_ROOT']).'/aadamya_school_mgmt/db_configuration/config
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
-<<<<<<< HEAD
+
 <link rel="shortcut icon" type="image/x-icon" href="//localhost/aadamya_school_mgmt/modules/dashboard/img/favicon.png">
 <!-- Normalize CSS -->
 <link rel="stylesheet" href="//localhost/aadamya_school_mgmt/modules/dashboard/css/normalize.css">
-=======
 <link rel="shortcut icon" type="image/x-icon" href="modules/dashboard/img/favicon.png">
 <!-- Normalize CSS -->
 <link rel="stylesheet" href="modules/dashboard/css/normalize.css">
->>>>>>> 276e686c6199130485a6662a7c772e623d1961e4
+
 <!-- Main CSS -->
 <link rel="stylesheet" href="//localhost/aadamya_school_mgmt/modules/dashboard/css/main.css">
 <!-- Bootstrap CSS -->
