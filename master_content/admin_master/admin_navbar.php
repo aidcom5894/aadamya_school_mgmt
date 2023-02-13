@@ -9,7 +9,7 @@
 <div class="nav-bar-header-one">
 <div class="header-logo">
 <a href="index.html">
-<img src="../../modules/dashboard/img/logo.png" alt="logo">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/logo.png" alt="logo">
 </a>
 </div>
 <div class="toggle-button sidebar-toggle">
@@ -52,7 +52,7 @@ aria-expanded="false">
 <span>Admin</span>
 </div>
 <div class="admin-img">
-<img src="../../modules/dashboard/img/figure/admin.jpg" alt="Admin">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/admin.jpg" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
@@ -85,7 +85,7 @@ aria-expanded="false">
 <div class="item-content">
 <div class="media">
 <div class="item-img bg-skyblue author-online">
-<img src="../../modules/dashboard/img/figure/student11.png" alt="img">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/student11.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -100,7 +100,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-yellow author-online">
-<img src="../../modules/dashboard/img/figure/student12.png" alt="img">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/student12.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -115,7 +115,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-pink">
-<img src="../../modules/dashboard/img/figure/student13.png" alt="img">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/student13.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -130,7 +130,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-violet-blue">
-<img src="../../modules/dashboard/img/figure/student11.png" alt="img">
+<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/student11.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
