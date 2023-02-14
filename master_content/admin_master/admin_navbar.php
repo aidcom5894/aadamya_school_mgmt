@@ -1,3 +1,7 @@
+<?php 
+
+?>
+
 
 <body>
 <!-- Preloader Start Here -->
@@ -48,8 +52,8 @@
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
 aria-expanded="false">
 <div class="admin-title">
-<h5 class="item-title">Stevne Zone</h5>
-<span>Admin</span>
+<h5 class="item-title"><?php echo $_SESSION['loggedinUser']; ?></h5>
+<span></span>
 </div>
 <div class="admin-img">
 <img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/admin.jpg" alt="Admin">
@@ -57,7 +61,7 @@ aria-expanded="false">
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title">Steven Zone</h6>
+<h6 class="item-title">sdfsd</h6>
 </div>
 <div class="item-content">
 <ul class="settings-list">

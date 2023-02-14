@@ -109,13 +109,15 @@ Remember me
 		$institute_id = $_POST['instID'];
 		$password = $_POST['password'];
 
+		// $fetchedAdmin = session_name();
+
 		$checkEntry = mysqli_query($config, "SELECT * FROM admin_login_details WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
 
 		if(mysqli_num_rows($checkEntry)>0)
 		{
+			
 			session_start();
-			$_SESSION['sessionName'] = $admin_Name;
-			header("location:admin_dashboard");
+			
 		}
 		else
 		{
