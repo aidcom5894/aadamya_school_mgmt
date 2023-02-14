@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 13, 2023 at 01:37 AM
+-- Generation Time: Feb 14, 2023 at 11:54 PM
 -- Server version: 8.0.32-0ubuntu0.22.04.2
 -- PHP Version: 7.4.33
 
@@ -20,27 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `school_mgmt`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin_login_details`
---
-
-CREATE TABLE `admin_login_details` (
-  `id` int NOT NULL,
-  `admin_name` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `admin_role` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `login_id` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(250) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `admin_login_details`
---
-
-INSERT INTO `admin_login_details` (`id`, `admin_name`, `admin_role`, `login_id`, `password`) VALUES
-(1, 'Admin', 'super_admin', 'DEMO02233821', 'RobinR2204#@');
 
 -- --------------------------------------------------------
 
@@ -67,17 +46,12 @@ CREATE TABLE `institute_registration` (
 --
 
 INSERT INTO `institute_registration` (`id`, `institute_name`, `admin_name`, `admin_role`, `hod_contact`, `login_id`, `password`, `inst_reg_id`, `institute_email`, `institute_address`, `registered_Date`) VALUES
-(1, 'Demonstration Account', 'Admin', 'super_admin', '+91-9264453821', 'DEMO02233821', 'RobinR2204#@', 'Update your Institution Registration No.', 'youremail@institute.com', 'Update your Institute Address Here', '2023-02-13 00:37:12');
+(1, 'Demonstration Account', 'Demo Admin', 'super_admin', '+91-9876543210', 'DEMO02233210', 'Admin1234#@', 'Update your Institution Registration No.', 'youremail@institute.com', 'Update your Institute Address Here', '2023-02-14 23:24:56'),
+(2, 'Abhinav ITI', 'Zebronics', 'super_admin', '+91-9264453821', 'ABHI02233821', 'RobinR2204#@', 'Update your Institution Registration No.', 'youremail@institute.com', 'Update your Institute Address Here', '2023-02-14 23:41:31');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin_login_details`
---
-ALTER TABLE `admin_login_details`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `institute_registration`
@@ -90,16 +64,10 @@ ALTER TABLE `institute_registration`
 --
 
 --
--- AUTO_INCREMENT for table `admin_login_details`
---
-ALTER TABLE `admin_login_details`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `institute_registration`
 --
 ALTER TABLE `institute_registration`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
