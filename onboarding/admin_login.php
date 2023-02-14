@@ -108,28 +108,35 @@ Remember me
 		$admin_Name = $_POST['adminName'];
 		$institute_id = $_POST['instID'];
 		$password = $_POST['password'];
-
-		// $fetchedAdmin = session_name();
-
-		$checkEntry = mysqli_query($config, "SELECT * FROM admin_login_details WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
+		$loggedinRole = "Super Admin";
+		
+		$checkEntry = mysqli_query($config, "SELECT * FROM institute_registration WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
 
 		if(mysqli_num_rows($checkEntry)>0)
 		{
-			
 			session_start();
+			$_SESSION['loggedinUser'] = $admin_Name;
+			$_SESSION['instituteDetails'] = $institute_id;
+			$_SESSION['loggedinRole'] = $loggedinRole;
+			
+			
+			if(isset($_SESSION['loggedinUser']))
+			{
+				header("location://localhost/aadamya_school_mgmt/onboarding/admin_dashboard");
+			}
+			else
+			{
+				echo "<script>alert('No Authorised User Found')</script>";
+			}
 			
 		}
 		else
 		{
-			echo "<script>alert('Login Failed')</script>";
+			echo "<script>alert('No Authorised Admin Found for Dashboard Access.')</script>";
 		}
 
 	}
-	else
-	{
-		echo "";
-	}
-
+	
 ?>
 
 

@@ -1,4 +1,13 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION['loggedinUser']))
+{
+	echo '<script language="javascript">';
+	echo 'alert("Authorization Required to Access Dashboard")';
+	echo '</script>';
+	header("location:login_platform");
+}
 
 ?>
 
@@ -53,7 +62,7 @@
 aria-expanded="false">
 <div class="admin-title">
 <h5 class="item-title"><?php echo $_SESSION['loggedinUser']; ?></h5>
-<span></span>
+<span><?php echo $_SESSION['instituteDetails']; ?></span>
 </div>
 <div class="admin-img">
 <img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/admin.jpg" alt="Admin">
@@ -61,7 +70,7 @@ aria-expanded="false">
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title">sdfsd</h6>
+<h6 class="item-title"><?php echo $_SESSION['loggedinRole']; ?></h6>
 </div>
 <div class="item-content">
 <ul class="settings-list">
@@ -69,7 +78,7 @@ aria-expanded="false">
 <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-<li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+<li><a href="//localhost/aadamya_school_mgmt/onboarding/admin_logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
 </ul>
 </div>
 </div>
