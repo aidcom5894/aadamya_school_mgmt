@@ -121,8 +121,11 @@ I agree to the terms of service
 		$instRegId = "Update your Institution Registration No.";
 		$instAddress = "Update your Institute Address Here";
 		$admin_role = "super_admin";
+		$tmp_address = "http://localhost/aadamya_school_mgmt/modules/user_avatar/";
+		$admin_avatar = array("avatar1.jpg","avatar2.png","avatar3.png","avatar4.png");
+		$default_avatar = $tmp_address.$admin_avatar[array_rand($admin_avatar,1)];
 
-		$sql = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,password,login_id,institute_email,inst_reg_id,institute_address) VALUES('$instName','$hodName','$admin_role','$hodContact','$password','$inst_recognition_id','$institute_email','$instRegId','$instAddress')";
+		$sql = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,password,login_id,institute_email,inst_reg_id,institute_address,admin_profile_pic) VALUES('$instName','$hodName','$admin_role','$hodContact','$password','$inst_recognition_id','$institute_email','$instRegId','$instAddress','$default_avatar')";
 
 		// $sql = "INSERT INTO admin_login_details (admin_name, admin_role, login_id, password) SELECT admin_name, admin_role, login_id, password FROM institute_registration";
 

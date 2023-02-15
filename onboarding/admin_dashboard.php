@@ -7,7 +7,6 @@ include('../master_content/admin_master/admin_sidebar.php');
 ?>
 
 <!-- section for breadcrumb starts here -->
-<!-- Sidebar Area End Here -->
 <div class="dashboard-content-one">
 <!-- Breadcubs Area Start Here -->
 <div class="breadcrumbs-area">

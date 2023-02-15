@@ -3,6 +3,8 @@
 include($_SERVER['DOCUMENT_ROOT'].'/aadamya_school_mgmt/db_configuration/configuration.php');
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,17 +111,17 @@ Remember me
 		$institute_id = $_POST['instID'];
 		$password = $_POST['password'];
 		$loggedinRole = "Super Admin";
-		
+				
 		$checkEntry = mysqli_query($config, "SELECT * FROM institute_registration WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
-
+				
 		if(mysqli_num_rows($checkEntry)>0)
 		{
+			
 			session_start();
 			$_SESSION['loggedinUser'] = $admin_Name;
 			$_SESSION['instituteDetails'] = $institute_id;
 			$_SESSION['loggedinRole'] = $loggedinRole;
-			  
-			
+
 			if(isset($_SESSION['loggedinUser']))
 			{
 				header("location://localhost/aadamya_school_mgmt/onboarding/admin_dashboard");
@@ -140,7 +142,11 @@ Remember me
 ?>
 
 
-
+$results = $stmt->get_result();
+while ($row = $result->fetch_array(MYSQLI_ASSOC))
+{
+    $points = $row['points'];
+}
 
 <!-- External JS libraries -->
 <script src="../modules/onboarding/assets/js/jquery-3.6.0.min.js"></script>

@@ -43,6 +43,7 @@ if(!isset($_SESSION['loggedinUser']))
 <i class="fas fa-bars"></i>
 </button>
 </div>
+
 <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
 <ul class="navbar-nav">
 <li class="navbar-item header-search-bar">
@@ -56,6 +57,7 @@ if(!isset($_SESSION['loggedinUser']))
 </div>
 </li>
 </ul>
+
 <ul class="navbar-nav">
 <li class="navbar-item dropdown header-admin">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -65,7 +67,7 @@ aria-expanded="false">
 <span><?php echo $_SESSION['instituteDetails']; ?></span>
 </div>
 <div class="admin-img">
-<img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/figure/admin.jpg" alt="Admin">
+<img src="" style="width:40px; height: 40px;" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
@@ -74,7 +76,7 @@ aria-expanded="false">
 </div>
 <div class="item-content">
 <ul class="settings-list">
-<li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+<li><a href="../dashboard_view/admin_profile_mgmt"><i class="flaticon-user"></i>My Profile</a></li>
 <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
