@@ -8,68 +8,120 @@
 <a href="index.html"><img src="//localhost/aadamya_school_mgmt/modules/dashboard/img/logo1.png" alt="logo"></a>
 </div>
 </div>
+
+
 <div class="sidebar-menu-content">
 <ul class="nav nav-sidebar-menu sidebar-toggle-view">
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
-<a href="index.html" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Profile Management</a>
 </li>
+
 <li class="nav-item">
 <a href="index3.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Students</a>
+class="fas fa-angle-right"></i>Password Management</a>
 </li>
 <li class="nav-item">
-<a href="index4.html" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
+<a href="index4.html" class="nav-link"><i class="fas fa-angle-right"></i>Authorize Admin</a>
 </li>
 <li class="nav-item">
-<a href="index5.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Teachers</a>
+<a href="index5.html" class="nav-link"><i class="fas fa-angle-right"></i>Priority Task</a>
 </li>
 </ul>
 </li>
 <li class="nav-item sidebar-nav-item">
-<a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+<a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Teacher Management</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
-<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>All
-Students</a>
+<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Add New Teachers</a>
 </li>
 <li class="nav-item">
-<a href="student-details.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Student Details</a>
+<a href="student-details.html" class="nav-link"><i class="fas fa-angle-right"></i>Assign Subject Teacher</a>
 </li>
 <li class="nav-item">
-<a href="admit-form.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Admission Form</a>
+<a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>New Applicants</a>
 </li>
+
 <li class="nav-item">
-<a href="student-promotion.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Student Promotion</a>
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Send Notice</a>
 </li>
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Teacher-Student Remarks</a>
+</li>
+
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Teachers Attendance</a>
+</li>
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Teachers Leave Request</a>
+</li>
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Teachers PF Account</a>
+</li>
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Teachers Resignation</a>
+</li>
+
+<li class="nav-item">
+<a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>View All Teachers</a>
+</li>
+
+
+
+
 </ul>
 </li>
 <li class="nav-item sidebar-nav-item">
-<a href="#" class="nav-link"><i
-class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
+<a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Student Management</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
-<a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>All
-Teachers</a>
+<a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add New Student</a>
 </li>
 <li class="nav-item">
-<a href="teacher-details.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Teacher Details</a>
+<a href="teacher-details.html" class="nav-link"><i class="fas fa-angle-right"></i>Attendance Shortage</a>
 </li>
+
 <li class="nav-item">
-<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
-Teacher</a>
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Complaint Note</a>
 </li>
+
 <li class="nav-item">
-<a href="teacher-payment.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Payment</a>
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Curriculum & Syllabus</a>
 </li>
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Parents Response</a>
+</li>
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Send Messages</a>
+</li>
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Student Fee Discount</a>
+</li>
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Students Profile</a>
+</li>
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Students Remarks</a>
+</li>
+
+
+<li class="nav-item">
+<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Students Result</a>
+</li>
+
+
 </ul>
 </li>
 <li class="nav-item sidebar-nav-item">
@@ -210,6 +262,8 @@ class="flaticon-settings"></i><span>Account</span></a>
 </li>
 </ul>
 </div>
+
+
 </div>
 <!-- Sidebar Area End Here -->
 

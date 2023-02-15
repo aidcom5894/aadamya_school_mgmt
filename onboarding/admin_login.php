@@ -118,7 +118,7 @@ Remember me
 			$_SESSION['loggedinUser'] = $admin_Name;
 			$_SESSION['instituteDetails'] = $institute_id;
 			$_SESSION['loggedinRole'] = $loggedinRole;
-			
+			  
 			
 			if(isset($_SESSION['loggedinUser']))
 			{
