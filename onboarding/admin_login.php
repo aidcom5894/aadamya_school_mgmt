@@ -113,6 +113,14 @@ Remember me
 		$loggedinRole = "Super Admin";
 				
 		$checkEntry = mysqli_query($config, "SELECT * FROM institute_registration WHERE login_id='$institute_id' and password='$password' and admin_name='$admin_Name'");
+
+		$userAvatar = mysqli_query($config,"SELECT admin_profile_pic FROM institute_registration");
+
+		while($row = mysqli_fetch_array($userAvatar,MYSQLI_ASSOC))
+		{
+			echo $row['admin_profile_pic'];
+		}
+		// mysql_free_result($userAvatar);
 				
 		if(mysqli_num_rows($checkEntry)>0)
 		{
@@ -121,6 +129,7 @@ Remember me
 			$_SESSION['loggedinUser'] = $admin_Name;
 			$_SESSION['instituteDetails'] = $institute_id;
 			$_SESSION['loggedinRole'] = $loggedinRole;
+			$_SESSION['avatar'] = $row['admin_profile_pic'];
 
 			if(isset($_SESSION['loggedinUser']))
 			{

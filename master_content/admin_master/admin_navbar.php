@@ -67,7 +67,7 @@ aria-expanded="false">
 <span><?php echo $_SESSION['instituteDetails']; ?></span>
 </div>
 <div class="admin-img">
-<img src="" style="width:40px; height: 40px;" alt="Admin">
+<img src="http://localhost/aadamya_school_mgmt/modules/user_avatar/avatar3.png" style="width:40px; height: 40px;" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
