@@ -1,0 +1,27 @@
+====== Selected UI Theme Link ======
+https://edublink.html.devsblink.com/index-university.html#
+
+
+====== Selected Admin Panel Theme Link ======
+https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html
+https://www.radiustheme.com/demo/html/psdboss/akkhor/
+
+
+====== Selected Onboarding Theme Link ======
+https://storage.googleapis.com/theme-vessel-items/checking-sites/oddo-2-html/HTML/main/login-13.html
+https://storage.googleapis.com/theme-vessel-items/checking-sites/oddo-2-html/HTML/main/register-13.html
+
+
+=== Other Options ===
+https://preview.themeforest.net/item/login-and-register-form-html5-template/full_screen_preview/35201796
+https://affixtheme.com/html/xmee/demo/login-1.html
+https://preview.themeforest.net/item/unco-college-university-html-template/full_screen_preview/32338809
+https://templates.envytheme.com/unco/default/index.html
+https://preview.themeforest.net/item/edulerns-education-courses-html-template/full_screen_preview/42064416
+http://kodeforest.net/html/uoe/
+https://preview.themeforest.net/item/akkhor-school-management-admin-template/full_screen_preview/23687250
+
+====== Link Redirection ======
+https://css-tricks.com/php-include-from-root/
+https://stackoverflow.com/questions/16048818/include-php-files-when-they-are-in-different-folders
+
